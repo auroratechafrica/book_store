@@ -1,0 +1,12 @@
+
+<div id="jasmine_content">
+  <p *ngFor="let book of books">
+  <li class="name"> {{book.name}}</li>
+  <img id="img" src="{{book.image}}" alt="" />
+  <li id="container-{{book.name}}"></li>
+  <br>
+  <button class="detail"  (click)=detail(book)>Detail</button>
+  <br>
+  <button class="detail"  (click)=checkout(book)>buy</button>
+</div>
+

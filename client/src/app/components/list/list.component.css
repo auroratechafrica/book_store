@@ -1,0 +1,27 @@
+#jasmine_content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3% 0 0 15%;
+  grid-gap: 30px;
+}
+li{
+  list-style-type: none;
+}
+img{
+  width: 40%;
+}
+.name{
+  font-size: 25px;
+}
+.detail{
+  width: 40%;
+  height: 40px;
+  background: #06069f;
+  border: solid 2px  #06069f;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+}
+
+
