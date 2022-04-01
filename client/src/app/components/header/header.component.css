@@ -1,11 +1,31 @@
 #logo{
   width: 50px;
   height: 50px;
+
 }
 #logo-text{
   margin-top: 0%;
   color: #06069f;
 }
-#header{
+#logo-container{
   display: flex;
+  padding: 0 30PX 30PX 0;
+}
+header{
+  display: grid;
+  padding: 0 10% 0 10% ;
+}
+#basket{
+  width: 50px;
+  height: 50px;
+}
+#basket-container{
+  display: flex;
+  justify-self: end;
+  margin-top: -9%;
+}
+#num-item{
+  margin: 2% 10% 0 0 ;
+  color: red;
+
 }

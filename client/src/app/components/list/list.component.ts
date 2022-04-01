@@ -16,24 +16,50 @@ interface Book {
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }
   books: Book[] = BookData;
+  book: any;
 
-  detail(book: Object) {
+  showDetail(book: Object) {
     // @ts-ignore
-    let container = document.getElementById('container-' + book.name)
-    let book_bio = document.createElement('p')
-    // @ts-ignore
-    book_bio.innerHTML = book.biography
-    // @ts-ignore
-    container.appendChild(book_bio)
+      let container = document.getElementById('container-' + book.id)
+      let book_bio = document.createElement('p')
+      // @ts-ignore
+      book_bio.setAttribute('id', 'bio-' + book.id)
+      // @ts-ignore
+      book_bio.innerHTML = book.biography
+      // @ts-ignore
+      container.appendChild(book_bio)
+      // @ts-ignore
+      let id = 'btn-detail-' + book.id
+      this.disableOrEnable(id, true)
+  }
+
+  disableOrEnable(id: string, disable = false) {
+    let detail_btn = document.getElementById(id)
+    if (disable) {
+      // @ts-ignore
+      detail_btn.setAttribute('disabled', true)
+    } else  {
+      // @ts-ignore
+      detail_btn.setAttribute('disabled', false)
+    }
   }
 
   checkout(book: Object) {
     // @ts-ignore
-      alert(`it is ${book.available ? '' : 'not'} available`)
+    if(book.available == true){
+
+      alert('book is the basket. Happy shopping!')
+
+    }else{
+      alert('This book is not available right now. Look to other books!')
+    }
   }
+
 }
