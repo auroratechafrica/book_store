@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import {ListComponent} from "./components/list/list.component";
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 // @ts-ignore
@@ -12,7 +14,9 @@ import {ListComponent} from "./components/list/list.component";
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListComponent
+    ListComponent,
+    CheckoutComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -23,3 +27,4 @@ import {ListComponent} from "./components/list/list.component";
 })
 
 export class AppModule { }
+

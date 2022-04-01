@@ -28,21 +28,6 @@ export class ListComponent implements OnInit {
   book: any;
   total: number  = 0;
 
-  showDetail(book: Object) {
-    // @ts-ignore
-      let container = document.getElementById('container-' + book.id)
-      let book_bio = document.createElement('p')
-      // @ts-ignore
-      book_bio.setAttribute('id', 'bio-' + book.id)
-      // @ts-ignore
-      book_bio.innerHTML = book.biography
-      // @ts-ignore
-      container.appendChild(book_bio)
-      // @ts-ignore
-      let id = 'btn-detail-' + book.id
-      this.disableOrEnable(id, true)
-  }
-
   disableOrEnable(id: string, disable = false) {
     let detail_btn = document.getElementById(id)
     if (disable) {

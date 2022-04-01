@@ -6,7 +6,12 @@
   <img id="img" src="{{book.image}}" alt="" />
   <li id="container-{{book.id}}"></li>
   <br>
-   <button  class="detail" id="{{ 'btn-detail-' + book.id }}" (click)=showDetail(book)>Detail</button>
+  <a
+    [title]="book.name + ' details'"
+    [routerLink]="['/detail', book.id]"
+     class="detail">
+    Detail
+  </a>
   <br>
   <button class="detail" (click)="checkout(book)">buy</button>
 
