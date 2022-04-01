@@ -8,6 +8,8 @@ interface Book {
   image: String
 
 }
+
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -24,6 +26,7 @@ export class ListComponent implements OnInit {
   }
   books: Book[] = BookData;
   book: any;
+  total: number  = 0;
 
   showDetail(book: Object) {
     // @ts-ignore
@@ -51,12 +54,14 @@ export class ListComponent implements OnInit {
     }
   }
 
+
   checkout(book: Object) {
     // @ts-ignore
     if(book.available == true){
-
       alert('book is the basket. Happy shopping!')
-
+      this.total += 1;
+      // @ts-ignore
+      document.getElementById('num-item').innerText = this.total
     }else{
       alert('This book is not available right now. Look to other books!')
     }
