@@ -1,10 +1,10 @@
-#jasmine_content{
+.list-group{
   display: grid;
   grid-template-columns: 40% 40%;
-  margin: 3% 0 0 2%;
+  margin: 3% 0 0 5%;
   grid-gap: 30px;
 }
-#book{
+.list-group-item{
   text-align: center;
   padding: 10%;
   margin: 5% 0 0 15%;
@@ -14,13 +14,11 @@
 li{
   list-style-type: none;
 }
-img{
+#book_img{
   width: 40%;
 }
-.name{
-  font-size: 25px;
-}
-.detail{
+
+.btn{
   width: 40%;
   height: 40px;
   background: #06069f;
@@ -29,6 +27,23 @@ img{
   color: white;
   font-size: 20px;
   margin: 0 0 15px 0;
+}
+
+.form-group{
+  padding: 2%;
+  width: 40%;
+  margin: 0 0 0 35%;
+  border-radius: 15px;
+}
+
+#search-text{
+  width: 300px;
+  height: 40px;
+}
+
+label{
+  margin: 50px;
+  font-weight: bold;
 }
 
 

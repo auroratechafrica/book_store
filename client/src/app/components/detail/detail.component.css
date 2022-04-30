@@ -1,4 +1,22 @@
 #container{
   width: 70%;
-  margin-left: 20%;
+  margin-left: 15%;
+}
+#back_btn{
+  width: 20%;
+  height: 40px;
+  background: #06069f;
+  border: solid 2px  #06069f;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+}
+#img{
+  float: left;
+  margin: 10px;
+}
+#bio{
+  font-size: 20px;
+  text-align:justify;
 }

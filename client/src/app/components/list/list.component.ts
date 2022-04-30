@@ -17,7 +17,8 @@ interface Book {
 
 })
 export class ListComponent implements OnInit {
-
+  
+  searchText = '';
   books: Book[] = Books;
   book: any;
   total: number  = 0;

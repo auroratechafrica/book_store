@@ -1,19 +1,27 @@
+<div class="content" role="main">
+  <div class="card">
+    <div class="form-group">
+      <label for="search-text">Search By Name</label>
+      <input type="text" class="form-control" id="search-text" aria-describedby="search-text" 
+        [(ngModel)]=searchText 
+        autofocus>
+    </div>
+    <ul class="list-group list-group-flush">
+      
+      <li class="list-group-item" *ngFor="let book of books | filter: searchText">
+          <h2> {{book.name}}</h2>
+          <img id="book_img" src="{{book.image}}" alt="" /><br>
+          <!-- <input type="hidden" id="container-{{book.id}}"> -->
+          <button [title]="book.name + ' details'"
+            [routerLink]="['/detail', book.id]"
+             class="btn" id="detail_btn">
+            Detail
+          </button>
+          <br>
+          <button class="btn" id="buy_btn" (click)="checkout(book)">buy</button>     
+      </li>
+    </ul>
+  </div>
+</div>
 
-
-<a id="jasmine_content">
-  <p *ngFor="let book of books" id="book">
-  <li class="name"> {{book.name}}</li>
-  <img id="img" src="{{book.image}}" alt="" />
-  <li id="container-{{book.id}}"></li>
-  <br>
-  <a
-    [title]="book.name + ' details'"
-    [routerLink]="['/detail', book.id]"
-     class="detail">
-    Detail
-  </a>
-  <br>
-  <button class="detail" (click)="checkout(book)">buy</button>
-
-</a>
 
