@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { default as  BookData} from 'book.json';
+import { default as  Books} from 'books.json';
 
 interface Book {
   id: String;
@@ -18,7 +18,7 @@ interface Book {
 export class DetailComponent implements OnInit {
 
   book: any | undefined;
-  books: Book[] = BookData;
+  books: Book[] = Books;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {

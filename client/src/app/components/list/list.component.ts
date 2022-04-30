@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { default as  BookData} from 'book.json';
+import { default as  Books} from 'books.json';
 
 interface Book {
   id: String;
@@ -18,16 +18,18 @@ interface Book {
 })
 export class ListComponent implements OnInit {
 
+  books: Book[] = Books;
+  book: any;
+  total: number  = 0;
+
   constructor() {
 
   }
 
   ngOnInit(): void {
+    let books = this.books
   }
-  books: Book[] = BookData;
-  book: any;
-  total: number  = 0;
-
+ 
   disableOrEnable(id: string, disable = false) {
     let detail_btn = document.getElementById(id)
     if (disable) {
@@ -51,5 +53,4 @@ export class ListComponent implements OnInit {
       alert('This book is not available right now. Look to other books!')
     }
   }
-
 }
