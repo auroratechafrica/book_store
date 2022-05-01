@@ -1,16 +1,14 @@
 
 #footer_text{
-    background-color: aquamarine;
+    background-color: #06069f;
     width: 100%;
     padding: 2% 2% 2% 2% ;
     text-align: center;
+    color: white;
 }
 @media screen and (max-width: 800px) {
     #footer_text{
-        background-color: aquamarine;
         width: 95%;
-        height: auto;
         padding: 10% 2% 10% 2% ;
-        text-align: center;
     }
 }
